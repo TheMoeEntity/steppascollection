@@ -11,6 +11,12 @@ export type testimonialsType = {
   work: string;
   text: string;
 };
+export type productType = {
+  title: string;
+  id: number;
+  image: string;
+  price: number;
+};
 export type donationType = {
   img: string;
   date: string;

@@ -4,7 +4,10 @@ const Header = () => {
   return (
     <>
       <header className="w-100 h-auto p-0">
-        <div style={{ background: "#38CB89" }} className="text-center py-1">
+        <div
+          style={{ background: "#38CB89" }}
+          className="text-center text-white text-small py-1"
+        >
           30% off storewide — Limited time!
         </div>
         <div className="d-flex justify-content-around py-3 px-6 px-sm-1">

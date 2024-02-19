@@ -15,6 +15,31 @@
 .grid {
   width: 100%;
   margin-left: 80px;
+  margin-bottom: 100px;
+}
+.categories {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+.categories > div {
+  flex: 33.3333%;
+  margin: 10px 5px;
+  background-color: #f3f5f7;
+  max-width: 330px;
+  min-width: 250px;
+  height: 300px;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+}
+.categoryPic {
+  width: 90%;
+  height: 200px;
+  position: relative;
 }
 @media screen and (max-width: 768px) {
   .grid {
