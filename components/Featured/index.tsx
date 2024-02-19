@@ -6,6 +6,8 @@ import man5 from "../../public/images/shoes-r.png";
 import hosel from "../../public/images/hosel-r.png";
 import shirt from "../../public/images/shirt-r.png";
 import sweat from "../../public/images/cap-r.png";
+import golf from "../../public/images/golf.png";
+import bag from "../../public/images/bag-r.png";
 import { productType } from "@/Helpers/types";
 
 const Featured = ({ products }: { products: productType[] }) => {
@@ -95,8 +97,38 @@ const Featured = ({ products }: { products: productType[] }) => {
                 <h3>Sweatpants</h3>
               </div>
             </div>
-            <div></div>
-            <div></div>
+            <div>
+              <div className={styles.categoryPic}>
+                <Image
+                  alt="Category Picture"
+                  style={{ objectFit: "contain" }}
+                  src={golf}
+                  fill
+                  quality={100}
+                  priority={true}
+                  //   sizes="(max-width: 500px) 100vw, (max-width: 100%) 50vw, 33vw"
+                />
+              </div>
+              <div>
+                <h3>Accessories</h3>
+              </div>
+            </div>
+            <div>
+              <div className={styles.categoryPic}>
+                <Image
+                  alt="Category Picture"
+                  style={{ objectFit: "contain" }}
+                  src={bag}
+                  fill
+                  quality={100}
+                  priority={true}
+                  //   sizes="(max-width: 500px) 100vw, (max-width: 100%) 50vw, 33vw"
+                />
+              </div>
+              <div>
+                <h3>Bags</h3>
+              </div>
+            </div>
           </div>
         </div>
       </div>

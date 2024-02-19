@@ -21,6 +21,7 @@ const Hero = () => {
               border: "0px",
               fontSize: "20px",
               padding: "5px",
+              color: "whitesmoke",
             }}
           >
             <i className="fa-solid fa-angle-right"></i>
@@ -29,6 +30,7 @@ const Hero = () => {
         prevArrow={
           <button
             style={{
+              color: "whitesmoke",
               border: "0px",
               fontSize: "20px",
               padding: "5px",
