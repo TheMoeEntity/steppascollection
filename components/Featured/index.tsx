@@ -8,6 +8,7 @@ import shirt from "../../public/images/shirt-r.png";
 import sweat from "../../public/images/cap-r.png";
 import golf from "../../public/images/golf.png";
 import bag from "../../public/images/bag-r.png";
+import furniture from "../../public/images/furniture.jpeg";
 import { productType } from "@/Helpers/types";
 
 const Featured = ({ products }: { products: productType[] }) => {
@@ -128,6 +129,31 @@ const Featured = ({ products }: { products: productType[] }) => {
               <div>
                 <h3>Bags</h3>
               </div>
+            </div>
+          </div>
+        </div>
+
+        <div className={styles.sales}>
+          <div>
+            <Image
+              alt="Sales Picture"
+              style={{ objectFit: "cover" }}
+              src={furniture}
+              fill
+              quality={100}
+              priority={true}
+              //   sizes="(max-width: 500px) 100vw, (max-width: 100%) 50vw, 33vw"
+            />
+          </div>
+          <div>
+            <div>
+              <a href="">SALE UP TO 30% OFF</a>
+              <h2 className="my-3">HUNDREDS Of New Lower Prices!</h2>
+              <p className="my-3">
+                It's more affordable than ever to give you the right sports
+                apparel
+              </p>
+              <button>Shop Now &rarr;</button>
             </div>
           </div>
         </div>

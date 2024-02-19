@@ -41,11 +41,43 @@
   height: 200px;
   position: relative;
 }
+.sales {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  margin-top: 90px;
+}
+.sales > div {
+  flex: 1 1;
+}
+.sales > div:nth-child(1) {
+  height: 350px;
+  position: relative;
+}
+.sales > div:nth-child(2) {
+  background: #f3f5f7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+.sales > div button {
+  border: none;
+  color: white;
+  background-color: #38cb89;
+  padding: 10px 12px;
+  border-radius: 7px;
+}
 @media screen and (max-width: 768px) {
   .grid {
     margin-left: 10px;
   }
   .featured h1 {
     margin-left: 10px;
+  }
+}
+@media screen and (max-width: 498px) {
+  .sales > div {
+    flex: 100%;
   }
 }
