@@ -150,8 +150,8 @@ const Featured = ({ products }: { products: productType[] }) => {
               <a href="">SALE UP TO 30% OFF</a>
               <h2 className="my-3">HUNDREDS Of New Lower Prices!</h2>
               <p className="my-3">
-                It's more affordable than ever to give you the right sports
-                apparel
+                {`It's`} more affordable than ever to give you the right sports
+                apparel.
               </p>
               <button>Shop Now &rarr;</button>
             </div>
