@@ -104,8 +104,9 @@ export const useValidRoute = (pathname: string): boolean => {
     "/localhost:3000",
     "/contact",
     "/",
-    "/works/[id]",
-    "/works" + params.slice(6, params.length),
+    "/shop",
+    "/shop/[id]",
+    "/shop" + params.slice(6, params.length),
   ];
   const checkValid = (pathname: string): boolean => {
     return validRoutes.includes(pathname);

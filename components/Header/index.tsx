@@ -1,5 +1,7 @@
 "use client";
 
+import Link from "next/link";
+
 const Header = () => {
   return (
     <>
@@ -12,12 +14,26 @@ const Header = () => {
         </div>
         <div className="d-flex justify-content-around py-3 px-6 px-sm-1">
           <div>
-            <b>Steppas</b>
+            <b>
+              <Link className="text-black" href="/">
+                Steppas
+              </Link>
+            </b>
           </div>
-          <div className="d-lg-flex d-md-flex justify-content-around d-none">
-            <div className="mx-3">Home</div>
+          <div
+            style={{ cursor: "pointer" }}
+            className="d-lg-flex d-md-flex justify-content-around d-none"
+          >
             <div className="mx-3">
-              Shop &nbsp; <i className="fa fa-angle-down"></i>
+              <Link className="text-black" href="/">
+                Home
+              </Link>
+            </div>
+            <div className="mx-3 text-black">
+              <Link className="text-black" href="/shop">
+                Shop
+              </Link>
+              &nbsp; <i className="fa fa-angle-down"></i>
             </div>
             <div className="mx-3">
               Product &nbsp; <i className="fa fa-angle-down"></i>

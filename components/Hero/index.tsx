@@ -5,8 +5,10 @@ import Image from "next/image";
 import styles from "./index.module.css";
 import "react-slideshow-image/dist/styles.css";
 import { Fade } from "react-slideshow-image";
+import { useRouter } from "next/navigation";
 
 const Hero = () => {
+  const router = useRouter();
   return (
     <div className="slide-container">
       <Fade
@@ -16,30 +18,6 @@ const Hero = () => {
         transitionDuration={400}
         indicators={true}
         autoplay={true}
-        // nextArrow={
-        //   <button
-        //     style={{
-        //       border: "0px",
-        //       fontSize: "20px",
-        //       padding: "5px",
-        //       color: "whitesmoke",
-        //     }}
-        //   >
-        //     <i className="fa-solid fa-angle-right"></i>
-        //   </button>
-        // }
-        // prevArrow={
-        //   <button
-        //     style={{
-        //       color: "whitesmoke",
-        //       border: "0px",
-        //       fontSize: "20px",
-        //       padding: "5px",
-        //     }}
-        //   >
-        //     <i className="fa-solid fa-angle-left"></i>
-        //   </button>
-        // }
       >
         <div className={styles.hero}>
           <Image
@@ -75,7 +53,8 @@ const Hero = () => {
             <span>Our Winter Collection</span>
             <h1 style={{ fontSize: "40px" }}>WINTER ESSENTIALS</h1>
             <span>Our winter collection is great, try them</span>
-            <button>
+
+            <button onClick={() => router.push("/shop")}>
               Shop collection <i>&#10230;</i>
             </button>
           </div>
