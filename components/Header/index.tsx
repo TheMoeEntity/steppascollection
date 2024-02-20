@@ -38,7 +38,11 @@ const Header = () => {
             <div className="mx-3">
               Product &nbsp; <i className="fa fa-angle-down"></i>
             </div>
-            <div className="mx-3">Contact Us</div>
+            <div className="mx-3">
+              <Link className="text-black" href="/contact">
+                Contact Us
+              </Link>
+            </div>
           </div>
           <div className="d-lg-flex d-md-flex justify-content-around d-none">
             <div className="mx-2">
