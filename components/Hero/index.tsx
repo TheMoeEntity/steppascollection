@@ -10,35 +10,36 @@ const Hero = () => {
   return (
     <div className="slide-container">
       <Fade
-        arrows={true}
+        arrows={false}
         infinite={true}
         duration={7000}
         transitionDuration={400}
         indicators={true}
-        nextArrow={
-          <button
-            style={{
-              border: "0px",
-              fontSize: "20px",
-              padding: "5px",
-              color: "whitesmoke",
-            }}
-          >
-            <i className="fa-solid fa-angle-right"></i>
-          </button>
-        }
-        prevArrow={
-          <button
-            style={{
-              color: "whitesmoke",
-              border: "0px",
-              fontSize: "20px",
-              padding: "5px",
-            }}
-          >
-            <i className="fa-solid fa-angle-left"></i>
-          </button>
-        }
+        autoplay={true}
+        // nextArrow={
+        //   <button
+        //     style={{
+        //       border: "0px",
+        //       fontSize: "20px",
+        //       padding: "5px",
+        //       color: "whitesmoke",
+        //     }}
+        //   >
+        //     <i className="fa-solid fa-angle-right"></i>
+        //   </button>
+        // }
+        // prevArrow={
+        //   <button
+        //     style={{
+        //       color: "whitesmoke",
+        //       border: "0px",
+        //       fontSize: "20px",
+        //       padding: "5px",
+        //     }}
+        //   >
+        //     <i className="fa-solid fa-angle-left"></i>
+        //   </button>
+        // }
       >
         <div className={styles.hero}>
           <Image

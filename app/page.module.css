@@ -68,6 +68,67 @@
   padding: 10px 12px;
   border-radius: 7px;
 }
+.collections {
+  width: 100%;
+  padding: 40px 70px;
+}
+.collections h2 {
+  padding: 40px 70px;
+}
+.collectionGrid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.collectionGrid > div {
+  flex: 1 1;
+  max-width: 400px;
+  height: 500px;
+  margin: 10px 10px;
+}
+.collectionPicture {
+  width: 90%;
+  height: 70%;
+  position: relative;
+  margin-bottom: 20px;
+}
+.collectionPicture2 {
+  width: 50%;
+  height: 100%;
+  position: relative;
+  margin-bottom: 0px;
+}
+.collectiontag {
+  display: flex;
+  flex-flow: column wrap;
+  padding: 25px;
+  justify-content: flex-end;
+}
+
+.collectionGrid > div:nth-child(1) {
+  background-color: #f3f5f7;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: flex-start;
+}
+.collectionGrid > div:nth-child(2) {
+  background-color: none;
+  display: flex;
+  flex-flow: column wrap;
+}
+.collectionGrid > div:nth-child(2) > div {
+  background-color: #f3f5f7;
+  flex: 1 1;
+  margin: 10px 0;
+  display: flex;
+}
+.collectionGrid > div:nth-child(2) > div:first-child {
+  margin-top: 0;
+}
+.collectionGrid > div:nth-child(2) > div:nth-child(2) {
+  margin-bottom: 0;
+}
 @media screen and (max-width: 768px) {
   .grid {
     margin-left: 10px;
@@ -78,6 +139,15 @@
 }
 @media screen and (max-width: 498px) {
   .sales > div {
+    flex: 100%;
+  }
+  .collections {
+    padding: 40px 10px;
+  }
+  .collections h2 {
+    padding: 40px 20px;
+  }
+  .collectionGrid > div {
     flex: 100%;
   }
 }

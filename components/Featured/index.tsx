@@ -8,7 +8,7 @@ import shirt from "../../public/images/shirt-r.png";
 import sweat from "../../public/images/cap-r.png";
 import golf from "../../public/images/golf.png";
 import bag from "../../public/images/bag-r.png";
-import furniture from "../../public/images/furniture.jpeg";
+import furniture from "../../public/images/furniture-2.jpeg";
 import { productType } from "@/Helpers/types";
 
 const Featured = ({ products }: { products: productType[] }) => {
