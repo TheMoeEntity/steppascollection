@@ -21,7 +21,6 @@ const FeaturedCard = ({
           fill
           quality={100}
           priority={true}
-          sizes="(max-width: 500px) 100vw, (max-width: 100%) 50vw, 33vw"
         />
         <div className={styles.cart}>Add to cart</div>
         <div className={styles.hot}>HOT</div>

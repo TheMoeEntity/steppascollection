@@ -8,11 +8,14 @@ export default async function Home() {
   const products = await Helpers.getProducts(
     "https://fakestoreapi.com/products"
   );
+  const menClothing = await Helpers.getProducts(
+    `https://fakestoreapi.com/products/category/women's%20clothing`
+  );
   return (
     <main className={styles.main}>
       <Hero />
       <Featured products={products} />
-      <Collections />
+      <Collections clothing={menClothing} />
     </main>
   );
 }

@@ -5,8 +5,8 @@ const Header = () => {
     <>
       <header className="w-100 h-auto p-0">
         <div
-          style={{ background: "#38CB89" }}
-          className="text-center text-white text-small py-1"
+          style={{ background: "#38CB89", fontSize: "small" }}
+          className="text-center text-white py-1"
         >
           30% off storewide — Limited time!
         </div>

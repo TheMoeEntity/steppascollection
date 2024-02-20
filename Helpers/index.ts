@@ -155,4 +155,31 @@ export class Helpers {
     }
     return array;
   };
+  static async getRandomImages(url: string) {
+    const products = await fetch(url, {
+      method: "GET",
+      headers: {
+        Accept: "application/json, text/plain, */*",
+        "Content-Type": "application/json",
+        Authorization: "Bearer " + "ljIEXaXArG30aGdSNMBYtw==7CGvUPLpeOShhXV1",
+      },
+    })
+      .then(async (res) => {
+        const isJson = res.headers
+          .get("content-type")
+          ?.includes("application/json");
+        const data = isJson ? await res.json() : null;
+        if (res.ok || res.status === 200) {
+          return data;
+        }
+        if (!res.ok) {
+          const error = (data && data.message) || res.status;
+          return Promise.reject(error);
+        }
+      })
+      .catch((err) => {
+        return JSON.stringify(err);
+      });
+    return products;
+  }
 }
