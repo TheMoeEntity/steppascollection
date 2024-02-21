@@ -52,7 +52,9 @@ const Header = () => {
               <i className="fa fa-shopping-bag"></i>
             </div>
             <div className="mx-2">
-              <i className="fas fa-shopping-cart"></i>
+              <Link href={"/cart"}>
+                <i className="fas text-dark fa-shopping-cart"></i>
+              </Link>
             </div>
           </div>
           <div

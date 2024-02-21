@@ -104,6 +104,7 @@ export const useValidRoute = (pathname: string): boolean => {
     "/localhost:3000",
     "/contact",
     "/",
+    "/cart",
     "/shop",
     "/shop/[id]",
     "/shop" + params.slice(6, params.length),
