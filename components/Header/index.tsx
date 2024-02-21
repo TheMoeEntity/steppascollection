@@ -78,9 +78,9 @@ const Header = () => {
         aria-labelledby="offcanvasExampleLabel"
       >
         <div className="offcanvas-header">
-          <h5 className="offcanvas-title" id="offcanvasExampleLabel">
-            Offcanvas
-          </h5>
+          <h2 className="offcanvas-title" id="offcanvasExampleLabel">
+            STEPPAS COLLECTION
+          </h2>
           <button
             type="button"
             className="btn-close text-reset"
@@ -88,38 +88,28 @@ const Header = () => {
             aria-label="Close"
           ></button>
         </div>
-        <div className="offcanvas-body">
+        <div className="offcanvas-body canv">
           <div>
-            Some text as placeholder. In real life you can have the elements you
-            have chosen. Like, text, images, lists, etc.
-          </div>
-          <div className="dropdown mt-3">
-            <button
-              className="btn btn-secondary dropdown-toggle"
-              type="button"
-              id="dropdownMenuButton"
-              data-bs-toggle="dropdown"
-            >
-              Dropdown button
-            </button>
-            <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <li>
-                <a className="dropdown-item" href="#">
-                  Action
-                </a>
-              </li>
-              <li>
-                <a className="dropdown-item" href="#">
-                  Another action
-                </a>
-              </li>
-              <li>
-                <a className="dropdown-item" href="#">
-                  Something else here
-                </a>
-              </li>
-            </ul>
-          </div>
+            <h4 className="mt-3">Menu</h4>
+          </div>{" "}
+          <br />
+          <ul>
+            <li>
+              <h4>Home</h4>
+            </li>{" "}
+            <br />
+            <li className="dropdown">
+              <h4>Products</h4>
+            </li>
+            <br />
+            <li>
+              <h4>Collections</h4>
+            </li>{" "}
+            <br />
+            <li>
+              <h4>Shop</h4>
+            </li>
+          </ul>
         </div>
       </div>
     </>
