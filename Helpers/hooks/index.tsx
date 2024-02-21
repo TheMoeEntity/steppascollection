@@ -114,7 +114,8 @@ export const useValidRoute = (pathname: string): boolean => {
   };
   return checkValid(pathname);
 };
-export const useHandles = () => {
+export const useHandles = (handleFilterFunc: any) => {
+  const [index, setIndex] = useState<number>(0);
   const [titles, setTitles] = useState<activeType[]>([
     {
       title: "Shopping Cart",
@@ -133,15 +134,7 @@ export const useHandles = () => {
     },
   ]);
   const handleFilter = (data: activeType) => {
-    setTitles((x) => {
-      const currActive = x.find((i) => i.title === data.title);
-      const newArray = x.map((x) =>
-        x === currActive
-          ? { ...currActive, active: true }
-          : { ...x, active: false }
-      );
-      return newArray;
-    });
+    handleFilterFunc(data);
   };
-  return { titles, handleFilter };
+  return { titles, handleFilter, index, setTitles, setIndex };
 };

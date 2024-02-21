@@ -317,6 +317,92 @@
   border: 01px solid black;
   border-radius: 7px;
 }
+.checkoutGrid {
+  display: flex;
+  width: 900px;
+  max-width: 100%;
+  margin: 20px auto;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+.checkoutGrid > div {
+  flex: 1 1;
+  margin: 15px 6px;
+  width: 100%;
+}
+.checkoutGrid > div:nth-child(2) {
+  padding: 15px 20px;
+  border: 0.5px solid black;
+  border-radius: 7px;
+}
+.checkoutGrid > div:nth-child(1) {
+  flex-grow: 1.8;
+  padding: 0 20px;
+  display: flex;
+  height: fit-content;
+  flex-flow: column wrap;
+}
+.checkoutGrid > div:nth-child(1) > div:first-child {
+  margin-top: 0;
+}
+.checkoutGrid > div:nth-child(1) > div {
+  border-radius: 7px;
+  margin: 15px 0;
+  padding: 20px 20px;
+  border: 0.5px solid black;
+}
+.checkoutGrid > div:nth-child(1) > div form {
+  width: 100%;
+}
+.checkoutGrid > div:nth-child(1) > div form .formGroup {
+  width: 100%;
+  margin: 12px 0;
+}
+.twoCol {
+  display: flex;
+  width: 100%;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+.twoCol > div {
+  flex: 1 / 1;
+  width: 48% !important;
+}
+.checkoutGrid > div:nth-child(1) > div form label {
+  display: block;
+  font-weight: bolder;
+  margin: 10px 0;
+}
+.checkoutGrid > div:nth-child(1) > div form input,
+.checkoutGrid > div:nth-child(1) > div form textarea {
+  width: 100%;
+  border: 1px solid #dcdcdc;
+  display: block;
+  border-radius: 7px;
+  padding: 5px 10px;
+  background-color: transparent;
+}
+.checkoutGrid > div:nth-child(1) > div form button {
+  background-color: black;
+  color: whitesmoke;
+  border: none;
+  padding: 10px 15px;
+}
+.receivedOrderContainer {
+  width: 450px;
+  max-width: 95%;
+  padding: 40px;
+  border-radius: 10px;
+  margin: 30px auto;
+  border: 1px solid rgba(179, 179, 179, 0.2);
+  box-shadow: 8px 9px 15px 4px rgba(179, 179, 179, 0.2);
+}
+.mainContainer {
+  width: 1100px;
+  max-width: 100%;
+  margin: 0 auto;
+  min-height: 700px;
+}
 @media screen and (max-width: 768px) {
   .grid {
     margin-left: 10px;
@@ -326,6 +412,11 @@
   }
 }
 @media screen and (max-width: 498px) {
+  .twoCol > div {
+    flex: 100%;
+    width: 100% !important;
+    margin: 10px 0;
+  }
   .sales > div {
     flex: 100%;
   }
@@ -342,9 +433,14 @@
   .cartGrid > div {
     flex: 100%;
   }
+  .checkoutGrid > div {
+    flex: 100%;
+    margin: 15px 0;
+  }
   .cartTitle > div:nth-child(2) {
     display: none;
   }
+
   .cartDetail {
     flex-flow: column wrap;
     justify-content: flex-start;

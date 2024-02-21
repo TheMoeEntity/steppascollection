@@ -8,15 +8,9 @@ export const CartView = (
   Image: any,
   cartDetail: string,
   cap: StaticImageData
-) => {
+): JSX.Element => {
   return (
-    <motion.div
-      layout
-      initial={{ transform: "scale(0) translateY(-300px)" }}
-      animate={{ transform: "scale(1) translateY(0px)" }}
-      exit={{ transform: "scale(0) translateY(-300px)" }}
-      className={cartGrid}
-    >
+    <div className={cartGrid}>
       <div>
         <div className={cartTitle}>
           <div>
@@ -100,6 +94,95 @@ export const CartView = (
           <button>Checkout</button>
         </div>
       </div>
-    </motion.div>
+    </div>
+  );
+};
+
+export const orderView = (
+  checkoutGrid: string,
+  twoCol: string,
+  formGroup: string
+): JSX.Element => {
+  return (
+    <div className={checkoutGrid}>
+      <div>
+        <div>
+          <h4 className="h4 my-2">Contact information</h4>
+          <form action="">
+            <div className={twoCol}>
+              <div className={formGroup}>
+                <label htmlFor="">FULL NAME</label>
+                <input type="text" />
+              </div>
+              <div className={formGroup}>
+                <label htmlFor="">FULL NAME</label>
+                <input type="text" />
+              </div>
+            </div>
+            <div className={formGroup}>
+              <label htmlFor="">FULL NAME</label>
+              <input type="text" />
+            </div>
+            <div className={formGroup}>
+              <label htmlFor="">EMAIL ADDRESS</label>
+              <input type="text" />
+            </div>
+            <div className={formGroup}>
+              <label htmlFor="">MESSAGE</label>
+              <textarea name="" id="" rows={6}></textarea>
+            </div>
+          </form>
+        </div>
+        <div>
+          <h4 className="h4 my-2">Shipping Address</h4>
+          <form action="">
+            <div className={formGroup}>
+              <label htmlFor="">STREER ADDRESS</label>
+              <input type="text" />
+            </div>
+            <div className={formGroup}>
+              <label htmlFor="">HOUSE ADDRESS</label>
+              <input type="text" />
+            </div>
+
+            <div className={twoCol}>
+              <div className={formGroup}>
+                <label htmlFor="">STATE</label>
+                <input type="text" />
+              </div>
+              <div className={formGroup}>
+                <label htmlFor="">ZIP CODE</label>
+                <input type="text" />
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div></div>
+    </div>
+  );
+};
+export const receivedOrder = (receivedOrderContainer: string): JSX.Element => {
+  return (
+    <div className={`${receivedOrderContainer} text-center py-5`}>
+      <p className="font-weight-bold h3 mb-0">
+        Your Order Has Been Received! 🥳
+      </p>
+      <i className="fa-solid fa-check-mark" />
+      <p className="mt-2">
+        We've recieved your order and will be shipping it to you as soon as
+        possible.
+      </p>
+
+      <button
+        className="btn-dark"
+        style={{ padding: "10px", borderRadius: "7px", fontSize: "small" }}
+        onClick={() => {
+          window.location.href = "/myaccount";
+        }}
+      >
+        Purchase History
+      </button>
+    </div>
   );
 };
