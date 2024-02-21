@@ -12,13 +12,13 @@ const Header = () => {
         >
           30% off storewide — Limited time!
         </div>
-        <div className="d-flex justify-content-around py-3 px-6 px-sm-1">
+        <div className="d-flex justify-content-around align-content-center py-3 px-6 px-sm-1">
           <div>
-            <b>
+            <big>
               <Link className="text-black" href="/">
-                Steppas
+                <b>Steppas</b>
               </Link>
-            </b>
+            </big>
           </div>
           <div
             style={{ cursor: "pointer" }}
@@ -57,9 +57,12 @@ const Header = () => {
               </Link>
             </div>
           </div>
-          <div className="d-lg-none d-md-none d-sm-flex">
+          <div
+            style={{ fontSize: "22px" }}
+            className="d-lg-none d-md-none d-sm-flex"
+          >
             <Link href={"/cart"}>
-              <i className="fa fa-shopping-cart text-dark mx-4"></i>
+              <i className="fa fa-shopping-cart text-dark mx-5"></i>
             </Link>
             <span
               data-bs-toggle="offcanvas"
@@ -95,19 +98,19 @@ const Header = () => {
           <br />
           <ul>
             <li>
-              <h4>Home</h4>
+              <p>Home</p>
             </li>{" "}
             <br />
             <li className="dropdown">
-              <h4>Products</h4>
+              <p>Products</p>
             </li>
             <br />
             <li>
-              <h4>Collections</h4>
+              <p>Collections</p>
             </li>{" "}
             <br />
             <li>
-              <h4>Shop</h4>
+              <p>Shop</p>
             </li>
           </ul>
         </div>

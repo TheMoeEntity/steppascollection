@@ -1,7 +1,7 @@
 import { notFound, usePathname, useRouter } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { Helpers } from "..";
-import { linkType } from "../types";
+import { activeType, linkType } from "../types";
 
 export const useResize = () => {
   const [val, setVal] = useState("");
@@ -113,4 +113,35 @@ export const useValidRoute = (pathname: string): boolean => {
     return validRoutes.includes(pathname);
   };
   return checkValid(pathname);
+};
+export const useHandles = () => {
+  const [titles, setTitles] = useState<activeType[]>([
+    {
+      title: "Shopping Cart",
+      index: 0,
+      active: true,
+    },
+    {
+      title: "Checkout Detail",
+      index: 1,
+      active: false,
+    },
+    {
+      title: "Order Complete",
+      index: 2,
+      active: false,
+    },
+  ]);
+  const handleFilter = (data: activeType) => {
+    setTitles((x) => {
+      const currActive = x.find((i) => i.title === data.title);
+      const newArray = x.map((x) =>
+        x === currActive
+          ? { ...currActive, active: true }
+          : { ...x, active: false }
+      );
+      return newArray;
+    });
+  };
+  return { titles, handleFilter };
 };

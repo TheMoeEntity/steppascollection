@@ -17,6 +17,11 @@ export type productType = {
   image: string;
   price: number;
 };
+export type activeType = {
+  title: "Shopping Cart" | "Checkout Detail" | "Order Complete";
+  index: 0 | 1 | 2;
+  active: boolean;
+};
 export type donationType = {
   img: string;
   date: string;

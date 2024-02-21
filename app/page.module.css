@@ -163,7 +163,7 @@
 .handles > div {
   width: fit-content;
   height: auto;
-  padding-bottom: 15px;
+  padding-bottom: 10px;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
@@ -175,9 +175,13 @@
 .handles > div.active {
   border-bottom: 2px solid black;
   color: black;
+  padding: 15px 10px;
+  padding-top: 0;
+  transition: 0.5s;
 }
 .handles > div > div:first-child.active {
   background-color: black;
+  transition: backgroud-color 0.5s;
 }
 .handles > div > div:first-child {
   width: 30px;
