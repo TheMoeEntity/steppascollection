@@ -57,13 +57,17 @@ const Header = () => {
               </Link>
             </div>
           </div>
-          <div
-            className="d-lg-none d-md-none d-sm-block"
-            data-bs-toggle="offcanvas"
-            data-bs-target="#offcanvasExample"
-            aria-controls="offcanvasExample"
-          >
-            <i className="fa-solid fa-bars"></i>
+          <div className="d-lg-none d-md-none d-sm-flex">
+            <Link href={"/cart"}>
+              <i className="fa fa-shopping-cart text-dark mx-4"></i>
+            </Link>
+            <span
+              data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasExample"
+              aria-controls="offcanvasExample"
+            >
+              <i className="fa-solid fa-bars"></i>
+            </span>
           </div>
         </div>
       </header>
