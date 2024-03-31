@@ -89,7 +89,7 @@ const Collections = ({ clothing }: { clothing: productType[] }) => {
         <p className="my-3">@Steppas_Collections</p>
       </div>
       <ul className="px-0 py-0 my-5 list-group list-group-horizontal position-relative overflow-scroll w-100">
-        {clothing?.map((x) => (
+        {/* {clothing?.map((x) => (
           <li className="list-group-item mx-3 px-0 py-o border-0" key={x.id}>
             <div>
               <div
@@ -107,7 +107,7 @@ const Collections = ({ clothing }: { clothing: productType[] }) => {
               </div>
             </div>
           </li>
-        ))}
+        ))} */}
       </ul>
     </div>
   );

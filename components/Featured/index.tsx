@@ -21,14 +21,14 @@ const Featured = ({ products }: { products: productType[] }) => {
         </div>
         <div className={styles.grid}>
           <ul className="px-0 py-0 list-group list-group-horizontal position-relative overflow-scroll w-100">
-            {products?.slice(0, 8).map((x) => (
+            {products !== undefined ? (products).slice(0, 8).map((x) => (
               <li
                 className="list-group-item mx-3 px-0 py-o border-0"
                 key={x.id}
               >
                 <FeaturedCard title={x.title} img={x.image} price={x.price} />
               </li>
-            ))}
+            )) : <></>}
           </ul>
         </div>
         <div className="mt-6 w-lg-75 w-sm-100 mx-auto d-block">
@@ -75,7 +75,7 @@ const Featured = ({ products }: { products: productType[] }) => {
                   fill
                   quality={100}
                   priority={true}
-                  //   sizes="(max-width: 500px) 100vw, (max-width: 100%) 50vw, 33vw"
+                //   sizes="(max-width: 500px) 100vw, (max-width: 100%) 50vw, 33vw"
                 />
               </div>
               <div>
@@ -91,7 +91,7 @@ const Featured = ({ products }: { products: productType[] }) => {
                   fill
                   quality={100}
                   priority={true}
-                  //   sizes="(max-width: 500px) 100vw, (max-width: 100%) 50vw, 33vw"
+                //   sizes="(max-width: 500px) 100vw, (max-width: 100%) 50vw, 33vw"
                 />
               </div>
               <div>
@@ -107,7 +107,7 @@ const Featured = ({ products }: { products: productType[] }) => {
                   fill
                   quality={100}
                   priority={true}
-                  //   sizes="(max-width: 500px) 100vw, (max-width: 100%) 50vw, 33vw"
+                //   sizes="(max-width: 500px) 100vw, (max-width: 100%) 50vw, 33vw"
                 />
               </div>
               <div>
@@ -123,7 +123,7 @@ const Featured = ({ products }: { products: productType[] }) => {
                   fill
                   quality={100}
                   priority={true}
-                  //   sizes="(max-width: 500px) 100vw, (max-width: 100%) 50vw, 33vw"
+                //   sizes="(max-width: 500px) 100vw, (max-width: 100%) 50vw, 33vw"
                 />
               </div>
               <div>
@@ -142,7 +142,7 @@ const Featured = ({ products }: { products: productType[] }) => {
               fill
               quality={100}
               priority={true}
-              //   sizes="(max-width: 500px) 100vw, (max-width: 100%) 50vw, 33vw"
+            //   sizes="(max-width: 500px) 100vw, (max-width: 100%) 50vw, 33vw"
             />
           </div>
           <div>

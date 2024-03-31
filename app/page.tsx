@@ -6,10 +6,10 @@ import styles from "./page.module.css";
 
 export default async function Home() {
   const products = await Helpers.getProducts(
-    "https://fakestoreapi.com/products"
+    "https://fakestoreapi.com/products" ?? null
   );
   const menClothing = await Helpers.getProducts(
-    `https://fakestoreapi.com/products/category/women's%20clothing`
+    `https://fakestoreapi.com/products/category/men's%20clothing` ?? null
   );
   return (
     <main className={styles.main}>
